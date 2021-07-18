@@ -42,10 +42,8 @@ management:
         include: hystrix.stream
 
 eureka:
-  client:
-    register-with-eureka: true
-    eureka.client.fetch-registry: true
-  service-url:
-    defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
-  instance:
-    hostname: eureka-0
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        service-url:
+            defaultZone: http://eureka:8761/eureka
